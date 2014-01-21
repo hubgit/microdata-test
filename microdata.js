@@ -1,6 +1,7 @@
 $(function() {
 	var input = $('textarea');
 	var output = $('output');
+	var outputNode = output.get(0);
 
 	var update = function() {
 		var node = $('<div>' + input.val() + '</div>');
@@ -10,11 +11,13 @@ $(function() {
 
 		// use this unattached element instead of document as the root (for itemref)
 		$.microdataRoot = node;
-		
+
 		var data = items.microdata();
 		var json = JSON.stringify(data, null, 2);
 
 		output.text(json);
+
+		hljs.highlightBlock(outputNode);
 	};
 
 	input.on('input', update);

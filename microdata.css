@@ -17,3 +17,8 @@ body > * {
 	border: none;
 	box-sizing: border-box;
 }
+
+output {
+	white-space: pre;
+	font-family: monospace;
+}

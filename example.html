@@ -7,17 +7,17 @@
 
 <!-- an album with the artist name inside it -->
 <div itemscope itemtype="http://schema.org/MusicAlbum">
-    <h2 itemprop="name">Simple Album</h1>
+    <h2 itemprop="name">Simple Album</h2>
     <div>by <span itemprop="byArtist">Simple Artist</span></div>
 </div>
 
 <!-- an album with the artist object outside it -->
 <div itemscope itemtype="http://schema.org/MusicAlbum" itemref="artist">
-    <h2 itemprop="name">Album Name</h1>
+    <h2 itemprop="name">Album Name</h2>
 </div>
 
 <!-- an album with 'url' and 'image' URL properties -->
 <div itemscope itemtype="http://schema.org/MusicAlbum" itemref="artist">
-    <h2 itemprop="name"><a itemprop="url" href="http://example.com/albums/2/">Linked Album</a></h1>
+    <h2 itemprop="name"><a itemprop="url" href="http://example.com/albums/2/">Linked Album</a></h2>
     <img itemprop="image" src="http://example.com/images/2.jpg">
 </div>

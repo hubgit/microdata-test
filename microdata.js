@@ -14,5 +14,10 @@ $(function() {
 		output.text(json);
 	};
 
-	input.on('input', update).trigger('input');
+	input.on('input', update);
+
+	// load the example HTML
+	$.get('example.html', function(data) {
+		input.val(data).trigger('input');
+	}, 'text');
 });

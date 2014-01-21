@@ -8,26 +8,5 @@
 <script src="http://git.macropus.org/jquery-microdata/jquery.microdata.js"></script>
 <script src="microdata.js"></script>
 
-<textarea placeholder="Paste HTML here…">
-<div id="artist">
-  <div itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup">
-    <h1 itemprop="name">Example Artist</h1>
-  </div>
-</div>
-
-<div itemscope itemtype="http://schema.org/MusicAlbum" itemref="artist">
-    <h2 itemprop="name">Album One</h1>
-</div>
-
-<div itemscope itemtype="http://schema.org/MusicAlbum" itemref="artist">
-    <h2 itemprop="name"><a itemprop="url" href="http://example.com/albums/2/">Album Two</a></h1>
-    <img itemprop="image" src="http://example.com/images/2.jpg">
-</div>
-
-<div itemscope itemtype="http://schema.org/MusicAlbum">
-    <h2 itemprop="name">Album Three</h1>
-    <div>by <span itemprop="byArtist">Artist Two</span></div>
-</div>
-</textarea>
-
+<textarea placeholder="Paste HTML here…"></textarea>
 <output></output>

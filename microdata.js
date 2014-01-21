@@ -1,13 +1,12 @@
 $(function() {
 	var input = $('textarea');
 	var output = $('output');
-	var container = $('#container');
 
 	var update = function() {
-		container.html(input.val());
+		$.microdataRoot = $('<div>' + input.val() + '</div>');
 
-		var subitems = container.find('[itemscope] [itemscope]');
-		var items = container.find('[itemscope]').not(subitems);
+		var subitems = $.microdataRoot.find('[itemscope] [itemscope]');
+		var items = $.microdataRoot.find('[itemscope]').not(subitems);
 
 		var data = items.microdata();
 		var json = JSON.stringify(data, null, 2);

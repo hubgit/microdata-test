@@ -3,11 +3,14 @@ $(function() {
 	var output = $('output');
 
 	var update = function() {
-		$.microdataRoot = $('<div>' + input.val() + '</div>');
+		var node = $('<div>' + input.val() + '</div>');
 
-		var subitems = $.microdataRoot.find('[itemscope] [itemscope]');
-		var items = $.microdataRoot.find('[itemscope]').not(subitems);
+		// find the top-level itemscope elements
+		var items = node.find('[itemscope]').not(node.find('[itemscope] [itemscope]'));
 
+		// use this unattached element instead of document as the root (for itemref)
+		$.microdataRoot = node;
+		
 		var data = items.microdata();
 		var json = JSON.stringify(data, null, 2);
 

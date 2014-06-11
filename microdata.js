@@ -6,12 +6,7 @@ $(function() {
 	var update = function() {
 		var node = $('<div>' + input.val() + '</div>');
 
-		// find the top-level itemscope elements
-		var items = node.find('[itemscope]').not(node.find('[itemscope] [itemscope]'));
-
-		// use this unattached element instead of document as the root (for itemref)
-		$.microdataRoot = node;
-
+		var items = $(node).items();
 		var data = items.microdata();
 		var json = JSON.stringify(data, null, 2);
 
